@@ -67,7 +67,7 @@ func main() {
 	active, err := dom.IsActive()
 	if err != nil {
 		panic(err)
-	} else if active == false {
+	} else if !active {
 		fmt.Fprintf(os.Stderr, "Libvirt domain is not running.\n")
 		os.Exit(2)
 	}
