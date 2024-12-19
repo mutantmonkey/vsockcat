@@ -83,7 +83,7 @@ func main() {
 		panic(err)
 	}
 
-	c, err := vsock.Dial(domInfo.Vsock.CID.Address, port)
+	c, err := vsock.Dial(domInfo.Vsock.CID.Address, port, nil)
 	if err != nil {
 		panic(err)
 	}
