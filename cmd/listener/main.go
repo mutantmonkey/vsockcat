@@ -23,7 +23,7 @@ func init() {
 }
 
 func main() {
-	ln, err := vsock.Listen(port)
+	ln, err := vsock.Listen(port, nil)
 	if err != nil {
 		panic(err)
 	}
